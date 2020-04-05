@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+	<head>
+		<style>
+			table, th, td {
+			  	border: 1px solid black;
+			  	padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		<title>DDD</title>
+		</header>	
+		<h1>Domain Driven Design - desenho orientado a dôminio</h1>
+		
+		<ul>
+			<li>
+				<h3>Conceitos</h3>
+				<ul>
+					<li>
+						Uma abordagem de desenho de software disciplinada que reúne um conjunto de conceitos, técnicas e princípios com foco no domínio e na lógica. 
+					</li>
+					<li>
+						Esforço dedicado na camada de modelo que representa toda a complexidade das regras de negócio.
+					</li>
+					<li>
+						A equipe deve possuir um <strong>domain expert</strong> é um membro da equipe, profundo conhecedor do negócio.
+					</li>
+					<li>
+						Trata-se de uma regra de 3 partes <strong>contexto</strong>, <strong>problema</strong> e <strong>solução</strong>. 
+					</li>
+					<li>
+						Este modo de desenho de software deve ser utilizado quando sistema posssui uma regra de negócio rica, e não se trata apenas de CRUDS
+					</li>
+					<li>
+						Contexto limitado por dominio, dentro deste limite todos os termos, definições e conceitos formam a <strong><a target="_blank" href="https://medium.com/@vsveras/domain-driven-design-linguagem-ub%C3%ADqua-9a7d2b3a0f74">linguagem ubíqua</a></strong>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<h3>Camadas</h3>
+				<table>
+					<tr>
+						<th>User interface</th>
+						<th>Application</th>
+						<th>Domain</th>
+						<th>Infrastructure</th>
+						<th>Query</th>
+					</tr>
+					<tr>
+						<td>Front-end</td>
+						<td>Coordena tarefas e delega trabalhos</td>
+						<td>Regras de negócio</td>
+						<td>Recursos técnicos como persistência de dados, migrations etc...</td>
+						<td><a target="_blank" href="https://www.eduardopires.net.br/2016/07/cqrs-o-que-e-onde-aplicar/">CQRS</a></td>
+					</tr>
+				</table>	
+			</li>
+
+			<li>
+				<h3>JPA</h3>
+				<ul>
+					<li>
+						<h4>AttributeConverter [Interface - Classe atributo]</h4>
+						<ul>
+							<li>
+								convertToDatebaseColumn : Recebemos o nosso objeto instanciado por parâmetro e vamos apenas pegar o valor que vai para o banco de dados
+							</li>
+							<li>
+								convertToEntityAttribute : Recebemos o valor do banco de dados, e vamos instanciar um novo objeto do tipo Document
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Atributo - Objeto [@Convert - Entity]</h4>
+						<ul>
+							<li>
+								Ex : 
+								<span>
+									<code>
+										<br /> @Convert(converter = DocumentConverter.class)
+										<br/> private Document documentNumber;
+									</code>
+								</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>	
+	</body>
+	<footer>
+		<ul>
+			<h3>
+				Links:
+			</h3>
+			<li>
+				<a target="_blank" href="http://static.olivergierke.de/lectures/ddd-and-spring/">Design orientado a domínio e Spring</a>
+			</li>
+		</ul>
+	</footer>
+</html>

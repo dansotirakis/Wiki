@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<head>
+		<style>
+			table, th, td {
+			  	border: 1px solid black;
+			  	padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		<title>Linux</title>
+		</header>	
+		<h1>Utilitários linux</h1>
+		<ul>
+			<li>
+				<h3>Comands</h3>
+				<table>
+					<tr>
+						<th>Funcionalidade</th>
+						<th>Comando</th>
+					</tr>
+					<tr>
+						<td>Mata processosudo</td>
+						<td>sudo kill -9 PID</td>
+					</tr>
+					<tr>
+						<td>Examina processo na porta</td>
+						<td>sudo lsof -i :PORTA</td>
+					</tr>
+					<tr>
+						<td>Examina processo em porta tcp</td>
+						<td>sudo lsof -w -n -i tcp:PORTA</td>
+					</tr>
+					<tr>
+						<td>Mata processo examinando porta</td>
+						<td>sudo kill -9 $(sudo lsof -t -i:PORTA)</td>
+					</tr>
+				</table>	
+			</li>
+		</ul>
+	</body>
+	<footer>
+		<ul>
+			<h3>
+				Links:
+			</h3>
+		</ul>
+	</footer>
+</html>
