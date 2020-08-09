@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <title>Spring</title>
+</header>
+<h1>Spring</h1>
+
+<ul>
+    <li>
+        <h3>Conceitos</h3>
+        <ul>
+            <li>
+                O Spring surgiu em 2003 como uma resposta à complexidade do início do Java Enterprise. Em seu núcleo, o
+                Spring começou como uma estrutura de injeção de dependência (DI) e de programação orientada a aspectos
+                (AOP) e evoluiu para uma estrutura de aplicativo da Web fácil de usar. Por meio de sua extensa
+                documentação, uso generalizado e inúmeras bibliotecas, o Spring permite que os desenvolvedores criem e
+                mantenham aplicativos de forma eficiente e fornece uma curva de aprendizado plana.
+            </li>
+            <li>
+                Spring realiza DI em tempo de execução usando reflexão. Portanto, quando um aplicativo Spring é
+                iniciado, o caminho de classe é varrido para classes anotadas. Com base nisso, os objetos concretos são
+                instanciados e vinculados.
+            </li>
+            <li>
+                Embora seja muito flexível e amigável para o desenvolvedor, pode tornar a inicialização lenta e consumir
+                muito memória. Além disso, é muito difícil migrar este mecanismo para GraalVM, pois ele não suporta
+                reflexão.
+            </li>
+        </ul>
+    </li>
+
+</ul>
+</body>
+<footer>
+    <ul>
+        <h3>
+            Links:
+        </h3>
+        <li>
+            <a target="_blank" href="https://quarkus.io/guides/">Quarkus guide</a>
+        </li>
+    </ul>
+</footer>
+</html>
