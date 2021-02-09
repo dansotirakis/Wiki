@@ -1,0 +1,15 @@
+ForEachRemaining() -> Iterator de Java
+
+	Uma interface disponívell nas coleções do java.util é utilizado para interar uma coleção de objetos.
+
+	Métodos:
+		default void	=	forEachRemaining(Consumer<? super E> action)
+			>	remaining element until all elemnts have ben processed or the action throws an exception.
+		boolean		=	hasNext()
+			>	returns true if the iteration has more elemnts.
+		object
+		 	>	return the next elemnts in the interation
+		default void
+			>	removes from the undertlying the last element returned bythis interator(Optional operation) 
+
+OBS: Antes do Java 8, o forEachRemaining()método não existia.
